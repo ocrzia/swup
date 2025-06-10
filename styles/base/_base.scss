@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300..700&display=swap');
+body {
+  overflow: hidden;
+}
+header {
+  background:#2c2c83;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 200px;
+  }
+}
+main {
+  padding:3rem;
+  // &::before {
+  //   content:"";
+  //   width: 102%;
+  //   height: 50px;
+  //   background:#fff;
+  //   transform:rotate(-1deg) translateY(-20px);
+  //   position: relative;
+  //   display: block;
+  // }
+}
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  h1 {
+    margin-top: 0;
+    font-family: "Poiret One", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    color:#FE5B6A;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+}
+.swup-link {
+  color: #60DDCD;
+  transition: color 0.3s ease;
+  margin-top: 2rem;
+  display: inline-block;
+  &:hover {
+    color: #FE5B6A;
+  }
+}
+
+/* Define a transition duration during page visits */
+html.is-changing .transition-fade {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+  opacity: 0;
+}
